@@ -25,17 +25,21 @@
     /* MUSIC PLAYER CONTAINER */
     .player-container {
       margin: 0 auto 30px;
-      max-width: 700px; /* Limits width to keep it looking clean like Skrillex.com */
+      max-width: 700px;
     }
 
     /* BUTTONS & FORM */
     .buttons, .form__entry { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; }
     .buttons a, .sib-form-block__button { border: 1px solid white !important; padding: 12px 24px; color: white !important; background: transparent !important; text-decoration: none; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: 0.3s; }
     .buttons a:hover, .sib-form-block__button:hover { background: white !important; color: black !important; }
+    
     .sib-form { background-color: transparent !important; padding: 0 !important; }
     .sib-container--large { background-color: transparent !important; border: none !important; max-width: 600px !important; margin: 0 auto; }
+    
     #EMAIL { background: transparent !important; border: 1px solid #fff !important; color: #fff !important; padding: 12px; width: 100%; max-width: 400px; font-family: Arial, sans-serif; text-transform: uppercase; letter-spacing: 1px; }
     #EMAIL::placeholder { color: rgba(255,255,255,0.5) !important; }
+    
+    /* CENTERED AND SPACED DISCLAIMER */
     .entry__specification { color: #666 !important; margin-top: 40px !important; display: block; font-size: 10px !important; line-height: 1.6; text-align: center !important; max-width: 80%; margin-left: auto; margin-right: auto; }
     
     /* FOOTER */
@@ -63,11 +67,9 @@
 
   <section id="music">
     <h2>MUSIC</h2>
-    
     <div class="player-container">
-      <iframe data-testid="embed-iframe" style="border-radius:12px" src="http://googleusercontent.com/spotify.com/7" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1864809814?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
-
     <div class="buttons">
       <a href="https://music.apple.com/us/artist/cursor/1477776410" target="_blank">Apple Music</a>
       <a href="https://soundcloud.com/cursorofficial" target="_blank">SoundCloud</a>
