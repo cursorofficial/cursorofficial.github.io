@@ -6,7 +6,6 @@
 
   <title>CURSOR @cursorofficial</title>
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="/cursorfavicon.png">
 
   <style>
@@ -63,7 +62,6 @@
       text-align: center;
     }
 
-    /* HERO LOGO */
     #home {
       display: flex;
       align-items: center;
@@ -87,8 +85,8 @@
       margin-bottom: 20px;
     }
 
-    /* BUTTONS */
-    .buttons {
+    /* BUTTONS & FORM INPUTS */
+    .buttons, .form__entry {
       display: flex;
       justify-content: center;
       gap: 20px;
@@ -96,50 +94,74 @@
       margin-top: 30px;
     }
 
-    .buttons a {
-      border: 1px solid white;
+    .buttons a, .sib-form-block__button {
+      border: 1px solid white !important;
       padding: 12px 24px;
-      color: white;
+      color: white !important;
+      background: transparent !important;
       text-decoration: none;
       font-size: 12px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      opacity: 0.85;
+      cursor: pointer;
+      transition: 0.3s;
     }
 
-    .buttons a:hover {
-      opacity: 1;
-      background: white;
-      color: black;
+    .buttons a:hover, .sib-form-block__button:hover {
+      background: white !important;
+      color: black !important;
     }
 
-    iframe {
+    /* BREVO FORM CUSTOMIZATION */
+    .sib-form {
+      background-color: transparent !important;
+      padding: 0 !important;
+    }
+    
+    .sib-container--large {
+      background-color: transparent !important;
+      border: none !important;
+      max-width: 600px !important;
       margin: 0 auto;
+    }
+
+    #EMAIL {
+      background: transparent !important;
+      border: 1px solid #fff !important;
+      color: #fff !important;
+      padding: 12px;
+      width: 100%;
+      max-width: 400px;
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    #EMAIL::placeholder {
+      color: rgba(255,255,255,0.5) !important;
+    }
+
+    .entry__specification {
+      color: #666 !important;
+      margin-top: 15px;
       display: block;
+      font-size: 10px !important;
+      line-height: 1.4;
     }
 
-    /* SIGNUP FORM */
-    .signup-form-container {
-      max-width: 540px;
-      margin: 0 auto;
-      text-align: center;
+    .entry__label {
+        display: none !important; /* Hiding redundant label for cleaner look */
     }
 
-    #signup-success {
-      display: none;
-      font-size: 32px;
-      letter-spacing: 3px;
-      margin-top: 20px;
-    }
-
-    /* FOOTER */
+    /* FOOTER - Set to Black */
     footer {
-      background: #111;
+      background: #000; 
       color: #888;
       text-align: center;
-      padding: 40px 20px 20px;
+      padding: 60px 20px 40px;
       font-size: 12px;
       letter-spacing: 1px;
+      border-top: 1px solid #222; /* Subtle separation */
     }
 
     footer a {
@@ -149,33 +171,22 @@
     }
 
     footer a:hover {
-      text-decoration: underline;
+      color: #fff;
     }
 
     /* MOBILE */
     @media (max-width: 768px) {
-      nav {
-        gap: 14px;
-      }
-
-      nav a {
-        font-size: 11px;
-      }
-
-      .hero-logo {
-        max-width: 360px;
-      }
+      nav { gap: 14px; }
+      nav a { font-size: 11px; }
+      .hero-logo { max-width: 360px; }
     }
   </style>
 
-  <!-- Brevo Form Styles -->
   <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
-
 </head>
 
 <body>
 
-  <!-- NAV -->
   <nav>
     <a href="#home">CURSOR</a>
     <a href="#music">MUSIC</a>
@@ -185,18 +196,15 @@
     <a href="#contact">CONTACT</a>
   </nav>
 
-  <!-- HOME -->
   <section id="home">
     <img src="/cursor-logo-white.png" alt="CURSOR logo" class="hero-logo" />
   </section>
 
-  <!-- MUSIC -->
   <section id="music">
     <h2>MUSIC</h2>
-
     <iframe
       style="border-radius:12px"
-      src="https://open.spotify.com/embed/artist/10wwZRvoeDlDXdYkpRnMQd"
+      src="https://open.spotify.com/embed/artist/4X9I9kI1j8D1lH8v9Uj9zX" 
       width="100%"
       height="380"
       frameborder="0"
@@ -210,41 +218,42 @@
     </div>
   </section>
 
-  <!-- SHOWS -->
   <section id="shows">
     <h2>SHOWS</h2>
     <p>New dates coming soon.</p>
   </section>
 
-  <!-- MERCH -->
   <section id="merch">
     <h2>MERCH</h2>
     <p>Merch coming soon.</p>
   </section>
 
-  <!-- SIGNUP -->
   <section id="signup">
     <h2>SIGNUP</h2>
-    <p>SIGN UP FOR UPDATES</p>
+    
+    <div class="sib-form">
+      <div id="sib-form-container" class="sib-form-container">
+        <div id="sib-container" class="sib-container--large">
+          <form id="sib-form" method="POST" action="https://2776271d.sibforms.com/serve/MUIFADcQ8mJJTvxl-S4mbi9wERg0cMmCVmPcPwz2A2cgPiNsvzOS1UW7iM2yUmtNQQEEwtNzv2N1Hbt3v85kpk4Z8GVS6NbhK-j8kxqdtXTfFYdoNcuQZO1B7EKEGQRvPnakecbvMIynVEX6e3lTZYGaHd2aU1Dtk-1-QnFXvtE1goBDR3Q0fo8MBTZpdSADcEaurpp56EnvtEHKNw==">
+            
+            <div class="form__entry">
+              <input class="input" type="email" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL ADDRESS" required />
+              <button class="sib-form-block__button" form="sib-form" type="submit">SUBSCRIBE</button>
+            </div>
 
-    <div class="signup-form-container">
-      <div id="signup-success">THANK YOU</div>
-
-      <form
-        id="brevo-form"
-        method="POST"
-        action="https://2776271d.sibforms.com/serve/MUIFADcQ8mJJTvxl-S4mbi9wERg0cMmCVmPcPwz2A2cgPiNsvzOS1UW7iM2yUmtNQQEEwtNzv2N1Hbt3v85kpk4Z8GVS6NbhK-j8kxqdtXTfFYdoNcuQZO1B7EKEGQRvPnakecbvMIynVEX6e3lTZYGaHd2aU1Dtk-1-QnFXvtE1goBDR3Q0fo8MBTZpdSADcEaurpp56EnvtEHKNw=="
-      >
-        <input type="email" name="EMAIL" placeholder="EMAIL" required />
-        <input type="text" name="email_address_check" value="" style="display:none;">
-        <input type="hidden" name="locale" value="en">
-        <input type="hidden" name="html_type" value="simple">
-        <button type="submit">SUBSCRIBE</button>
-      </form>
+            <label class="entry__specification">
+              By subscribing, you agree to receive updates from Cursor. Opt-out at any time.
+            </label>
+            
+            <input type="text" name="email_address_check" value="" style="display:none;">
+            <input type="hidden" name="locale" value="en">
+            <input type="hidden" name="html_type" value="simple">
+          </form>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact">
     <h2>CONTACT</h2>
     <p>
@@ -254,36 +263,14 @@
     </p>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p>
       <a href="privacy.html">Privacy Policy</a> |
       <a href="terms.html">Terms of Service</a> |
       <a href="cookies.html">Cookie Policy</a>
     </p>
-    <p>© 2026 Cursor. All rights reserved.</p>
+    <p style="margin-top: 10px;">© 2026 Cursor. All rights reserved.</p>
   </footer>
-
-  <!-- Brevo AJAX Script -->
-  <script>
-    const form = document.getElementById("brevo-form");
-    const success = document.getElementById("signup-success");
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const data = new FormData(form);
-
-      fetch(form.action, {
-        method: "POST",
-        body: data,
-        mode: "no-cors"
-      }).then(() => {
-        form.style.display = "none";
-        success.style.display = "block";
-      });
-    });
-  </script>
 
 </body>
 </html>
