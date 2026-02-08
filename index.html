@@ -113,6 +113,46 @@
       color: black;
     }
 
+    /* SIGNUP FORM */
+    .signup-form {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .signup-form input {
+      background: transparent;
+      border: 1px solid white;
+      color: white;
+      padding: 12px 16px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      width: 260px;
+    }
+
+    .signup-form input::placeholder {
+      color: rgba(255,255,255,0.6);
+    }
+
+    .signup-form button {
+      background: transparent;
+      border: 1px solid white;
+      color: white;
+      padding: 12px 24px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .signup-form button:hover {
+      background: white;
+      color: black;
+    }
+
     iframe {
       margin: 0 auto;
       display: block;
@@ -192,7 +232,28 @@
   <section id="signup">
     <h2>SIGNUP</h2>
     <p>Join the mailing list for new music, shows, and exclusives.</p>
-    <p>Email signup coming soon.</p>
+
+    <form
+      method="POST"
+      action="https://2776271d.sibforms.com/serve/MUIFADcQ8mJJTvxl-S4mbi9wERg0cMmCVmPcPwz2A2cgPiNsvzOS1UW7iM2yUmtNQQEEwtNzv2N1Hbt3v85kpk4Z8GVS6NbhK-j8kxqdtXTfFYdoNcuQZO1B7EKEGQRvPnakecbvMIynVEX6e3lTZYGaHd2aU1Dtk-1-QnFXvtE1goBDR3Q0fo8MBTZpdSADcEaurpp56EnvtEHKNw=="
+      class="signup-form"
+    >
+
+      <input
+        type="email"
+        name="EMAIL"
+        placeholder="Email address"
+        required
+      />
+
+      <button type="submit">Subscribe</button>
+
+      <!-- Required hidden fields -->
+      <input type="text" name="email_address_check" value="" style="display:none;">
+      <input type="hidden" name="locale" value="en">
+      <input type="hidden" name="html_type" value="simple">
+
+    </form>
   </section>
 
   <!-- CONTACT -->
