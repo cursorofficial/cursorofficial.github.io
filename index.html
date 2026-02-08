@@ -118,6 +118,40 @@
       display: block;
     }
 
+    /* SIGNUP FORM */
+    .signup-form-container {
+      max-width: 540px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    #signup-success {
+      display: none;
+      font-size: 32px;
+      letter-spacing: 3px;
+      margin-top: 20px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      color: #888;
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    footer a {
+      color: #888;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
     /* MOBILE */
     @media (max-width: 768px) {
       nav {
@@ -134,37 +168,9 @@
     }
   </style>
 
-  <!-- Brevo Fonts & Styles -->
+  <!-- Brevo Form Styles -->
   <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
-  <style>
-    @font-face {
-      font-display: block;
-      font-family: Roboto;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
-    }
-    @font-face {
-      font-display: fallback;
-      font-family: Roboto;
-      font-weight: 600;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
-    }
-    @font-face {
-      font-display: fallback;
-      font-family: Roboto;
-      font-weight: 700;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
-    }
 
-    #sib-container input::placeholder {
-      text-align: left;
-      font-family: Helvetica, sans-serif;
-      color: #c0ccda;
-    }
-    #sib-container a {
-      text-decoration: underline;
-      color: #2BB2FC;
-    }
-  </style>
 </head>
 
 <body>
@@ -221,47 +227,21 @@
     <h2>SIGNUP</h2>
     <p>SIGN UP FOR UPDATES</p>
 
-    <!-- BEGIN BREVO FORM -->
-    <div class="sib-form" style="text-align: center; background-color: #EFF2F7;">
-      <div id="sib-form-container" class="sib-form-container">
-        <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(255,255,255,1); max-width:540px; border-radius:3px; border-width:1px; border-color:#C0CCD9; border-style:solid;">
-          <form id="sib-form" method="POST" action="https://2776271d.sibforms.com/serve/MUIFADcQ8mJJTvxl-S4mbi9wERg0cMmCVmPcPwz2A2cgPiNsvzOS1UW7iM2yUmtNQQEEwtNzv2N1Hbt3v85kpk4Z8GVS6NbhK-j8kxqdtXTfFYdoNcuQZO1B7EKEGQRvPnakecbvMIynVEX6e3lTZYGaHd2aU1Dtk-1-QnFXvtE1goBDR3Q0fo8MBTZpdSADcEaurpp56EnvtEHKNw==">
-            <div style="padding: 8px 0;">
-              <div class="sib-form-block" style="font-size:32px; font-weight:700; font-family:Helvetica, sans-serif; color:#3C4858; text-align:left">
-                <p>SIGN UP FOR UPDATES</p>
-              </div>
-            </div>
-            <div style="padding: 8px 0;">
-              <div class="sib-input sib-form-block">
-                <div class="form__entry entry_block">
-                  <div class="form__label-row">
-                    <label class="entry__label" style="font-weight:700; font-size:16px; font-family:Helvetica, sans-serif; color:#3c4858;" for="EMAIL">Enter your email address to subscribe</label>
-                    <div class="entry__field">
-                      <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" required />
-                    </div>
-                  </div>
-                  <label class="entry__error entry__error--primary" style="font-size:16px; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;"></label>
-                  <label class="entry__specification" style="font-size:12px; color:#8390A4;">
-                    By submitting my information, I confirm that I want to receive personalized updates and marketing messages about Cursor and agree to Brevo's Terms of Service, Cookie Policy, Privacy Policy, and Cursor's Privacy Policy and Terms of Service. I can opt-out at any time by unsubscribing in any email.
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div style="padding: 8px 0;">
-              <div class="sib-form-block" style="text-align:left">
-                <button class="sib-form-block__button sib-form-block__button-with-loader" type="submit" style="font-size:16px; font-weight:700; font-family:Helvetica, sans-serif; color:#FFFFFF; background-color:#3E4857; border-radius:3px; border-width:0px;">
-                  SUBSCRIBE
-                </button>
-              </div>
-            </div>
-            <input type="text" name="email_address_check" value="" class="input--hidden">
-            <input type="hidden" name="locale" value="en">
-            <input type="hidden" name="html_type" value="simple">
-          </form>
-        </div>
-      </div>
+    <div class="signup-form-container">
+      <div id="signup-success">THANK YOU</div>
+
+      <form
+        id="brevo-form"
+        method="POST"
+        action="https://2776271d.sibforms.com/serve/MUIFADcQ8mJJTvxl-S4mbi9wERg0cMmCVmPcPwz2A2cgPiNsvzOS1UW7iM2yUmtNQQEEwtNzv2N1Hbt3v85kpk4Z8GVS6NbhK-j8kxqdtXTfFYdoNcuQZO1B7EKEGQRvPnakecbvMIynVEX6e3lTZYGaHd2aU1Dtk-1-QnFXvtE1goBDR3Q0fo8MBTZpdSADcEaurpp56EnvtEHKNw=="
+      >
+        <input type="email" name="EMAIL" placeholder="EMAIL" required />
+        <input type="text" name="email_address_check" value="" style="display:none;">
+        <input type="hidden" name="locale" value="en">
+        <input type="hidden" name="html_type" value="simple">
+        <button type="submit">SUBSCRIBE</button>
+      </form>
     </div>
-    <!-- END BREVO FORM -->
   </section>
 
   <!-- CONTACT -->
@@ -277,27 +257,28 @@
   <!-- FOOTER -->
   <footer>
     <p>
-      <a href="/privacy.html">Privacy Policy</a> |
-      <a href="/terms.html">Terms</a> |
-      <a href="/cookies.html">Cookies</a>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms of Service</a> |
+      <a href="cookies.html">Cookie Policy</a>
     </p>
-    <p>&copy; 2026 CURSOR. All rights reserved.</p>
+    <p>© 2026 Cursor. All rights reserved.</p>
   </footer>
 
   <!-- Brevo AJAX Script -->
   <script>
-    const form = document.getElementById("sib-form");
-    const success = document.createElement('div');
-    success.innerText = "THANK YOU";
-    success.style.fontSize = "32px";
-    success.style.letterSpacing = "3px";
-    success.style.display = "none";
-    form.parentNode.appendChild(success);
+    const form = document.getElementById("brevo-form");
+    const success = document.getElementById("signup-success");
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+
       const data = new FormData(form);
-      fetch(form.action, { method: "POST", body: data, mode: "no-cors" }).then(() => {
+
+      fetch(form.action, {
+        method: "POST",
+        body: data,
+        mode: "no-cors"
+      }).then(() => {
         form.style.display = "none";
         success.style.display = "block";
       });
