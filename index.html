@@ -17,8 +17,54 @@
     
     /* SECTIONS */
     section { min-height: 100vh; padding: 120px 20px 80px; max-width: 1100px; margin: 0 auto; text-align: center; }
-    #home { display: flex; align-items: center; justify-content: center; }
-    .hero-logo { width: 90%; max-width: 700px; height: auto; }
+    
+    /* LIGHTNING HOME SECTION STYLES */
+    #home { 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      position: relative;
+      overflow: hidden;
+    }
+    .logo-wrapper {
+      position: relative;
+      display: inline-block;
+      width: 90%;
+      max-width: 700px;
+    }
+    .hero-logo { width: 100%; height: auto; transition: filter 0.3s; }
+    
+    .lightning-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      opacity: 0;
+    }
+    .logo-wrapper:hover .lightning-container { opacity: 1; }
+    .logo-wrapper:hover .hero-logo { filter: brightness(1.2) contrast(1.2); }
+
+    .bolt {
+      stroke: #fff;
+      stroke-width: 2;
+      fill: none;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      filter: drop-shadow(0 0 8px #fff);
+    }
+
+    @keyframes strike {
+      0% { stroke-dashoffset: 1000; opacity: 1; }
+      20% { stroke-dashoffset: 0; opacity: 1; }
+      40% { opacity: 0; }
+      50% { opacity: 1; stroke-dashoffset: 0; }
+      60% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    .logo-wrapper:hover .bolt { animation: strike 0.5s linear infinite; }
+
     h2 { font-size: 32px; letter-spacing: 4px; margin-bottom: 30px; }
     p { opacity: 0.8; margin-bottom: 20px; }
     
@@ -26,7 +72,7 @@
     .player-container {
       margin: 0 auto 30px;
       max-width: 700px;
-      min-height: 352px; /* Prevents layout jump while loading */
+      min-height: 352px;
     }
 
     /* BUTTONS & FORM */
@@ -62,28 +108,32 @@
   </nav>
 
   <section id="home">
-    <img src="/cursor-logo-white.png" alt="CURSOR logo" class="hero-logo" />
+    <div class="logo-wrapper">
+      <img src="/cursor-logo-white.png" alt="CURSOR logo" class="hero-logo" />
+      <svg class="lightning-container" viewBox="0 0 200 200" preserveAspectRatio="none">
+        <path class="bolt" d="M100,0 L90,50 L110,70 L80,120 L100,150 L90,200" />
+        <path class="bolt" style="animation-delay: 0.1s;" d="M90,50 L60,80 L70,100" />
+        <path class="bolt" style="animation-delay: 0.2s;" d="M80,120 L120,140 L110,160" />
+      </svg>
+    </div>
   </section>
 
-<!-- MUSIC -->
   <section id="music">
     <h2>MUSIC</h2>
-
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3Td7cR30NnFRrMmAso5ZEZ?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
+    <div class="player-container">
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3Td7cR30NnFRrMmAso5ZEZ?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
     <div class="buttons">
       <a href="https://music.apple.com/us/artist/cursor/1477776410" target="_blank">Apple Music</a>
       <a href="https://soundcloud.com/cursorofficial" target="_blank">SoundCloud</a>
     </div>
   </section>
 
-  <!-- SHOWS -->
   <section id="shows">
     <h2>SHOWS</h2>
     <p>New dates coming soon.</p>
   </section>
 
-  <!-- MERCH -->
   <section id="merch">
     <h2>MERCH</h2>
     <p>Merch coming soon.</p>
