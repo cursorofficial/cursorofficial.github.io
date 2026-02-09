@@ -129,10 +129,15 @@
       filter: drop-shadow(0 0 8px #fff);
     }
 
-    /* Mobile handling: Hide on small screens or move to bottom */
+ /* Mobile handling: Adjust sidebar for smaller screens */
     @media (max-width: 768px) {
       .social-sidebar {
-        display: none; /* Keeps mobile view from getting cluttered */
+        right: 10px; /* Moves it closer to the edge */
+        gap: 15px;   /* Tighter spacing */
+      }
+      .social-sidebar a {
+        font-size: 18px; /* Slightly smaller icons */
+        opacity: 0.6;    /* Slightly more visible since they are smaller */
       }
     }
   </style>
