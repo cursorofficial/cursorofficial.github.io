@@ -13,6 +13,7 @@
   </script>
 
   <link rel="icon" type="image/png" href="/cursorfavicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -103,11 +104,49 @@
     footer a:hover { color: #fff; }
     
     @media (max-width: 768px) { nav { gap: 14px; } nav a { font-size: 11px; } .hero-logo { max-width: 360px; } }
+    .social-sidebar {
+      position: fixed;
+      right: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      z-index: 10001; /* Above the noise and nav */
+    }
+
+    .social-sidebar a {
+      color: #fff;
+      font-size: 22px; /* Adjust size as needed */
+      text-decoration: none;
+      opacity: 0.4;
+      transition: all 0.3s ease;
+    }
+
+    .social-sidebar a:hover {
+      opacity: 1;
+      transform: scale(1.2); /* Slight pop out effect */
+      filter: drop-shadow(0 0 8px #fff);
+    }
+
+    /* Mobile handling: Hide on small screens or move to bottom */
+    @media (max-width: 768px) {
+      .social-sidebar {
+        display: none; /* Keeps mobile view from getting cluttered */
+      }
+    }
   </style>
   <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
   <script charset="utf-8" src="https://widgetv3.bandsintown.com/main.min.js"></script>
 </head>
 <body>
+  <div class="social-sidebar">
+  <a href="https://instagram.com/cursorofficial" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+  <a href="https://soundcloud.com/cursorofficial" target="_blank" aria-label="SoundCloud"><i class="fa-brands fa-soundcloud"></i></a>
+  <a href="https://twitter.com/cursorofficial" target="_blank" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+  <a href="https://tiktok.com/@cursorofficial" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+  <a href="https://youtube.com/@cursorofficial" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+</div>
   <nav>
     <a href="#home">CURSOR</a>
     <a href="#music">MUSIC</a>
